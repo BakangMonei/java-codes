@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="720.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atmapplication.Controller">
+   <center>
+      <VBox maxWidth="300.0" minWidth="315.0" prefHeight="200.0" prefWidth="300.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="white-text" text="LOGIN" textAlignment="CENTER" wrappingWidth="315.0">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <TextField fx:id="accNumberField" alignment="CENTER" promptText="Account Number" />
+            <PasswordField fx:id="accPinField" alignment="CENTER" promptText="Account PIN" />
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#LoginButton" prefHeight="25.0" prefWidth="318.0" styleClass="smooth-corner-button" text="Login" />
+            <Button fx:id="noAccountButton" mnemonicParsing="false" onAction="#SignupButton" prefHeight="25.0" prefWidth="318.0" styleClass="smooth-corner-button" text="I don't have an account" />
+            <Label fx:id="loginDialog" prefHeight="17.0" prefWidth="331.0" text="s" textAlignment="CENTER" />
+         </children>
+         <padding>
+            <Insets top="185.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

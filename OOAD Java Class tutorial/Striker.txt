@@ -1,0 +1,1 @@
+Strikers==> registrationNumber: *1233*, jerseyNumber: *55*, Name: *Davince*, Surname: *Chanaki*, Age: *22*, Gender: *M*, numberOfGoals: *323*

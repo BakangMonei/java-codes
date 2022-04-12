@@ -1,0 +1,64 @@
+create table UserPerson(
+Username char(20),
+UserPassword varchar(50),
+Primary Key(Username)
+);
+
+create table Player(
+RegistrationNumber char(20),
+FirstName varchar(20),
+LastName varchar(20),
+Age Number(2),
+PlayerPosition varchar(20),
+Primary Key(RegistrationNumber),
+Foreign Key(RegistrationNumber) References UserPerson(Username)
+);
+
+create table Coach(
+FirstName varchar(20),
+LastName varchar(20),
+Age Number(2),
+CoachingLicenseDetails char(20),
+CurrentTeam varchar(20),
+PreviousTeam varchar(20),
+Primary Key(CoachingLicenseDetails),
+Foreign Key(CoachingLicenseDetails) References UserPerson(Username)
+);
+
+create Table TeamAdmin(
+FirstName varchar(20),
+LastName varchar(20),
+Age Number(2),
+Gender varchar(6),
+ClubName char(20),
+Primary Key(ClubName),
+Foreign Key(ClubName) References UserPerson(Username)
+);
+
+create table LeagueAdmin(
+FirstName char(20),
+LastName varchar(20),
+Age Number(2),
+DateHired Date,
+Primary Key(FirstName),
+Foreign Key(FirstName) References UserPerson(Username)
+);
+
+create table Club(
+NameOfClub char(20),
+Address varchar(20),
+Owner varchar(20),
+Primary Key(NameOfClub),
+Foreign Key(NameOfClub) References UserPerson(Username),
+Foreign Key(NameOfClub) References TeamAdmin(ClubName)
+);
+
+create table Stadium(
+StadiumName char(20),
+StadiumLocation varchar(20),
+StadiumCapacity number(10),
+YearOpened date,
+PitchDimensions number,
+Primary Key(StadiumName),
+Foreign Key(StadiumName) References Club(NameOfClub)
+);

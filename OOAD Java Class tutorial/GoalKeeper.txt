@@ -1,0 +1,1 @@
+GoalKeeper==> registrationNumber: *101*, jerseyNumber: *999*, Name: *Max*, Surname: *JavaFX*, Age: *23*, Gender: *M*, numberOfSaves=394*

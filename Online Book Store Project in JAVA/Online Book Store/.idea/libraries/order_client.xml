@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="order_client">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/order_client.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

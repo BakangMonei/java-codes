@@ -1,0 +1,1 @@
+Defender==> registrationNumber: *123*, jerseyNumber: *32*, Name: *Wesly*, Surname: *Jozi*, Age: *20*, Gender: *M*, numberOfTackles: *321*

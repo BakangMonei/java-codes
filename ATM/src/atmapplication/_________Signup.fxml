@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="720.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atmapplication.Controller">
+    <center>
+        <VBox maxWidth="300.0" minWidth="315.0" prefHeight="200.0" prefWidth="300.0" spacing="18.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="white-text" text="SIGNUP" textAlignment="CENTER" wrappingWidth="315.0">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="firstNameFieldSU" alignment="CENTER" promptText="First Name" />
+            <TextField fx:id="lastNameFieldSU" alignment="CENTER" promptText="Last Name" />
+            <TextField fx:id="emailFieldSU" alignment="CENTER" promptText="Email" />
+            <DatePicker fx:id="dobFieldSU" prefHeight="25.0" prefWidth="316.0" promptText="                        Date Of Birth/DDMMYYYY" />
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="315.0" spacing="50.0">
+               <children>
+                  <RadioButton fx:id="maleOptSU" mnemonicParsing="false" styleClass="white-text" text="Male" />
+                  <RadioButton fx:id="femaleOptSU" mnemonicParsing="false" styleClass="white-text" text="Female" />
+               </children>
+            </HBox>
+            <VBox prefHeight="122.0" prefWidth="315.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="occupationFieldSU" alignment="CENTER" promptText="Ocupation" />
+                  <TextField fx:id="companyFieldSU" alignment="CENTER" promptText="Company/Organisation Name" />
+                  <TextField fx:id="addressFieldSU" alignment="CENTER" promptText="Company/Organisation Address" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" prefHeight="29.0" prefWidth="315.0" styleClass="white-text" text="Account Type">
+               <VBox.margin>
+                  <Insets top="-5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="315.0" spacing="25.0">
+               <children>
+                  <RadioButton fx:id="chequeFieldSU" mnemonicParsing="false" styleClass="white-text" text="Cheque" />
+                  <RadioButton fx:id="savingsFieldSU" mnemonicParsing="false" styleClass="white-text" text="Savings" />
+                  <RadioButton fx:id="interestBearingFieldSU" mnemonicParsing="false" styleClass="white-text" text="Interest Bearing" />
+               </children>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <PasswordField fx:id="pinFieldSU" alignment="CENTER" promptText="Enter PIN" />
+                  <Button fx:id="createAccountButton" mnemonicParsing="false" onAction="#LoginAfterSignup" prefHeight="25.0" prefWidth="321.0" styleClass="smooth-corner-button" text="Create Account" />
+                  <Button fx:id="exitSignupButton" mnemonicParsing="false" onAction="#LogoutButton" prefHeight="25.0" prefWidth="321.0" styleClass="smooth-corner-button" text="Exit" />
+               </children>
+            </VBox>
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </VBox>
+    </center>
+</BorderPane>

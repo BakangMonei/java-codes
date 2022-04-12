@@ -1,0 +1,7 @@
+// Erase these comments before running
+// Adding the support library to the dependency section.
+
+dependencies {
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+}

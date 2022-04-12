@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="720.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atmapplication.Controller">
+    <top>
+        <VBox prefHeight="125.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="white-text" text="Statements" textAlignment="CENTER" wrappingWidth="471.576171875">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="What would you like to do today?" textAlignment="CENTER" wrappingWidth="470.693359375" />
+            </children>
+            <padding>
+                <Insets left="125.0" top="35.0" />
+            </padding>
+        </VBox>
+    </top>
+    <center>
+        <VBox prefHeight="375.0" prefWidth="460.0" spacing="35.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="15.0" right="15.0" top="10.0" />
+            </BorderPane.margin>
+            <children>
+                <Pane prefHeight="367.0" prefWidth="236.0" styleClass="display-background-color">
+                    <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <VBox layoutX="1.0" layoutY="1.0" prefHeight="328.0" prefWidth="388.0">
+                            <children>
+                        <HBox prefHeight="78.0" prefWidth="392.0">
+                           <children>
+                              <VBox prefHeight="78.0" prefWidth="139.0">
+                                 <children>
+                                    <Label fx:id="fullNameStat" prefHeight="26.0" prefWidth="139.0" styleClass="white-text" text="Name">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="emailStat" prefHeight="26.0" prefWidth="139.0" styleClass="white-text" text="Address">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children></VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="78.0" prefWidth="229.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="133.0" styleClass="white-text" text="Account Number" />
+                                    <Label fx:id="accNumber" prefHeight="17.0" prefWidth="133.0" styleClass="white-text" text="XXXXXX" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="120.0" top="10.0" />
+                                 </padding></VBox>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </HBox>
+                        <TableView fx:id="statTable" prefHeight="249.0" prefWidth="374.0">
+                          <columns>
+                            <TableColumn prefWidth="60.0" text="Date" />
+                            <TableColumn prefWidth="77.0" text="Type" />
+                              <TableColumn prefWidth="74.0" text="Reference" />
+                              <TableColumn prefWidth="85.0" text="Amount" />
+                              <TableColumn prefWidth="90.0" text="Balance" />
+                          </columns>
+                        </TableView>
+                            </children>
+                        </VBox>
+                  <HBox layoutX="2.0" layoutY="328.0" prefHeight="33.0" prefWidth="387.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="181.0" styleClass="white-text" text="***Total***" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="availBalance" alignment="CENTER" prefHeight="32.0" prefWidth="73.0" styleClass="white-text" text="XXXXX" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="120.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin></Pane>
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <VBox prefHeight="453.0" prefWidth="150.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#Balance" prefHeight="115.0" prefWidth="215.0" styleClass="home-button" text="Balance" />
+                <Button mnemonicParsing="false" onAction="#Withdraw" prefHeight="115.0" prefWidth="215.0" styleClass="home-button" text="Withdraw" />
+                <Button mnemonicParsing="false" onAction="#Deposit" prefHeight="115.0" prefWidth="215.0" styleClass="home-button" text="Deposit" />
+            </children>
+            <padding>
+                <Insets left="20.0" top="10.0" />
+            </padding>
+        </VBox>
+    </left>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="150.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#Profile" prefHeight="110.0" prefWidth="215.0" styleClass="home-button" text="Profile" />
+                <Button mnemonicParsing="false" onAction="#Statement" prefHeight="110.0" prefWidth="215.0" styleClass="home-button" text="Statements" />
+                <Button mnemonicParsing="false" onAction="#ChangePIN" prefHeight="110.0" prefWidth="215.0" styleClass="home-button" text="Change Pin" />
+            </children>
+            <padding>
+                <Insets right="20.0" top="10.0" />
+            </padding>
+        </VBox>
+    </right>
+    <bottom>
+        <Pane prefHeight="127.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="logoutButton" layoutX="20.0" layoutY="24.0" mnemonicParsing="false" onAction="#LogoutButton" prefHeight="80.0" prefWidth="680.0" styleClass="home-button" text="Log out" />
+            </children>
+        </Pane>
+    </bottom>
+</BorderPane>

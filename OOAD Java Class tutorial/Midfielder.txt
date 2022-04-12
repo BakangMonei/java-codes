@@ -1,0 +1,1 @@
+Midfielder==> registrationNumber: *222*, jerseyNumber: *43*, Name: *AMG*, Surname: *Gibe*, Age: *22*, Gender: *M*, numberOfPassesCompleted: *4321*
